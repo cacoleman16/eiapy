@@ -5,9 +5,10 @@ __version__ = "0.1.5"
 import os
 import requests
 from xml.etree import ElementTree
+import apiKey
 
 try:
-    API_KEY = os.environ['EIA_KEY']
+    API_KEY =apiKey.EIA_API_KEY
 except KeyError:
     raise RuntimeError("eiapy requires an api key to function, read "
                        "https://github.com/systemcatch/eiapy#setting-up-your-api-key to solve this")
